@@ -4,7 +4,9 @@ name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on: [push]
+on:
+  push:
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,10 +25,12 @@ jobs:
         run: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
       - name: install yarn
         run: sudo apt update && sudo apt install yarn
+        
       - name: Build React App
         run: npm build
       - name: Install Surge
         run: npm install --global surge
+        
       - name: Run surge
         run: surge ./build bootcamp2020-react-app-version1.surge.sh --token ${{ secrets.SURGE_TOKEN }}
 
