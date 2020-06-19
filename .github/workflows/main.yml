@@ -38,17 +38,5 @@ jobs:
         run: npm install -g surge
         
       - name: Run surge
-<<<<<<< HEAD
-<<<<<<< HEAD:.github/workflows/surge_deploy.yml
-        run: surge ./buid bootcamp2020-reactapp-version1.surge.sh --token ${{secrets.SURGE_TOKEN}}
-=======
-        run: surge ./buid http://bootcamp2020-react-app-version1.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
->>>>>>> eae2cfb45e5650b72e8773c7bc658ab6cc27ec77:.github/workflows/main.yml
-=======
-<<<<<<<< HEAD:.github/workflows/main.yml
-        run: surge ./buid http://bootcamp2020-react-app-version1.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
-========
-        run: surge ./buid bootcamp2020-reactapp-version1.surge.sh --token ${{secrets.SURGE_TOKEN}}
->>>>>>>> eae2cfb45e5650b72e8773c7bc658ab6cc27ec77:.github/workflows/surge_deploy.yml
->>>>>>> eae2cfb45e5650b72e8773c7bc658ab6cc27ec77
+        run: surge ./buid bootcamp2020-reactapp-version1.surge.sh --token ${{ secrets.SURGE_TOKEN }}
 
