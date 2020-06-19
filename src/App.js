@@ -4,8 +4,8 @@ import './App.css';
 
 function App() {
   return (
-    <div style="font-size: 20px; color:#4a54f1; text-align:center; padding-top:100px;">
-      Hello World
+    <div>
+      Hello World! this is bootcamp 2020.
     </div>
   );
 }
