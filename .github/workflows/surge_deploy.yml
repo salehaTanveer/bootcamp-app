@@ -32,5 +32,5 @@ jobs:
         run: npm install --global surge
         
       - name: Run surge
-        run: surge ./build bootcamp2020-react-app-version1.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build http://bootcamp2020-react-app-version1.surge.sh --token ${{secrets.SURGE_TOKEN}}
 
